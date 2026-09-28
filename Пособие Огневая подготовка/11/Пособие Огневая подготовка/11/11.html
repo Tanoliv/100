@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Снайперская винтовка СВД - Огневая подготовка</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-test.css">
+    <style>
+        .question-block.multi {
+            border-left-color: #1f5f8b;
+        }
+        .question-block .hint {
+            font-size: 13px;
+            color: #555;
+            font-style: italic;
+            margin: 4px 0 8px 0;
+        }
+        .question-block label {
+            display: block;
+            margin: 4px 0;
+            cursor: pointer;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+        .question-block label.answer-correct {
+            background: #d6f5d6;
+            border-left: 3px solid #1f7a1f;
+        }
+        .question-block label.answer-wrong-selected {
+            background: #f8d6d6;
+            border-left: 3px solid #8b0000;
+            text-decoration: line-through;
+        }
+        .question-block label.answer-correct-not-selected {
+            background: #fff7d6;
+            border-left: 3px solid #b8860b;
+        }
+        .question-block .feedback {
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 6px 10px;
+            border-radius: 4px;
+            text-indent: 0;
+        }
+        .question-block .feedback.ok {
+            color: #1f7a1f;
+            background: #e6f7e6;
+        }
+        .question-block .feedback.fail {
+            color: #8b0000;
+            background: #f7e6e6;
+        }
+        .question-block .correct-list {
+            font-size: 14px;
+            color: #333;
+            background: #f0f4f8;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-top: 6px;
+            text-indent: 0;
+        }
+        .question-block .correct-list strong {
+            color: #1f5f8b;
+        }
+        .question-block .correct-list ul {
+            margin: 4px 0 0 20px;
+            padding: 0;
+        }
+        .question-block .correct-list li {
+            margin: 2px 0;
+        }
+        .question-block .explanation {
+            font-size: 14px;
+            color: #333;
+            background: #eef6ee;
+            border-left: 3px solid #1f7a1f;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-top: 6px;
+            text-indent: 0;
+        }
+        .question-block .explanation strong {
+            color: #1f5f8b;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="top">
+    <!-- ===== ШАПКА С НАВИГАЦИЕЙ ===== -->
+    <div class="header">
+        <div class="header-left">
+            <span class="star">★</span>
+            <h1>Огневая подготовка</h1>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">★ Главная</a>
+            <a href="9.html">◀ Предыдущая</a>
+            <a href="10.html">Следующая ▶</a>
+        </div>
+    </div>
+
+    <!-- ===== КОНТЕНТ ===== -->
+    <div class="content">
+        <h2>Назначение, боевые свойства, материальная часть и применение снайперской винтовки СВД</h2>
+
+        <p>7,62-мм снайперская винтовка Драгунова (рис. 1) является оружием снайпера и предназначена для уничтожения различных появляющихся, движущихся, открытых и маскированных одиночных целей.</p>
+
+         <!-- ===== ИЗОБРАЖЕНИЕ РИС. 1 ===== -->
+<div class="figure">
+    <img src="СВД.jpg" alt="СВД" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+        <p><em>Рис. 1</em></p>
+
+        <h3>Основные боевые характеристики СВД</h3>
+
+        <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse; margin:15px 0; font-size:16px; border-color:#5a4d3a;">
+            <thead>
+                <tr style="background:#cbc4b2;">
+                    <th style="border:1px solid #5a4d3a; padding:8px; text-align:center;">Характеристика</th>
+                    <th style="border:1px solid #5a4d3a; padding:8px; text-align:center;">Значение</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px;">Калибр</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">7,62 мм</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px;">Применяемый патрон</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">7,62×54R</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px;">Длина винтовки</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">1220 мм</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px;">Длина ствола</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">620 мм</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px;">Масса (без патронов и оптического прицела)</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">4,3 кг</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px;">Начальная скорость пули</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">830 м/с</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px;">Боевая скорострельность</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">до 30 выстрелов/мин</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px;">Емкость магазина</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">10 патронов</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px;">Прицельная дальность (с оптическим прицелом)</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">1300 м</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px;">Прицельная дальность (с открытым прицелом)</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">1200 м</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px;">Прицельная дальность (с ночным прицелом)</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">до 300 м</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px;">Дальность убойного действия пули</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">до 3800 м</td></tr>
+            </tbody>
+        </table>
+
+        <p>Для стрельбы из снайперской винтовки применяются винтовочные патроны с обыкновенными, трассирующими и бронебойно-зажигательными пулями или винтовочные снайперские патроны.</p>
+
+        <p>Огонь из снайперской винтовки ведется одиночными выстрелами.</p>
+
+        <p>Подача патронов при стрельбе производится из коробчатого магазина емкостью на 10 патронов.</p>
+
+        <p>В комплект снайперской винтовки входят: принадлежность, ремень, чехол для оптического прицела, сумка для переноски оптического прицела и магазинов, сумочка для переноски зимнего устройства освещения сетки, запасных батареек и масленки.</p>
+
+        <p>Снайперская винтовка является самозарядным оружием. Перезаряжание винтовки основано на использовании энергии пороховых газов, отводимых из канала ствола к газовому поршню.</p>
+
+        <p>При выстреле часть пороховых газов, следующих за пулей, устремляется через газоотводное отверстие в стенке ствола в газовую камеру, давит на переднюю стенку газового поршня и отбрасывает поршень с толкателем, а вместе с ними и затворную раму в заднее положение. При отходе затворной рамы назад затвор открывает канал ствола, извлекает из патронника гильзу и выбрасывает ее из ствольной коробки наружу, а затворная рама сжимает возвратные пружины и взводит курок (ставит его на взвод автоспуска).</p>
+
+        <p>В переднее положение затворная рама с затвором возвращается под действием возвратного механизма, затвор при этом досылает очередной патрон из магазина в патронник и закрывает канал ствола, а затворная рама выводит шептало автоспуска из-под взвода автоспуска курка. Курок становится на боевой взвод. Запирание затвора осуществляется его поворотом влево и захождением боевых выступов затвора в вырезы ствольной коробки.</p>
+
+        <p>Для производства очередного выстрела необходимо отпустить спусковой крючок и нажать на него снова. После освобождения спускового крючка тяга продвигается вперед и ее зацеп заскакивает за шептало, а при нажатии на спусковой зацеп тяги поворачивает шептало и разъединяет его с боевым взводом курка.</p>
+
+        <p>При выстреле последним патроном, когда затвор отойдет назад, подаватель магазина поднимает вверх останов затвора, затвор упирается в него и затворная рама остается в заднем положении. Это является сигналом о том, что надо снова зарядить винтовку.</p>
+
+        <h3>Основные части и механизмы снайперской винтовки, их работа при стрельбе</h3>
+
+        <p>Снайперская винтовка состоит из следующих основных частей и механизмов (рис. 2):</p>
+
+        <ul>
+            <li>ствола со ствольной коробкой, открытым прицелом и прикладом;</li>
+            <li>крышки ствольной коробки;</li>
+            <li>возвратного механизма;</li>
+            <li>затворной рамы;</li>
+            <li>затвора;</li>
+            <li>газовой трубки с регулятором, газового поршня и толкателя с пружиной;</li>
+            <li>ствольных накладок (правой и левой);</li>
+            <li>ударно-спускового механизма;</li>
+            <li>предохранителя;</li>
+            <li>магазина;</li>
+            <li>щеки приклада;</li>
+            <li>оптического прицела;</li>
+            <li>штыка-ножа.</li>
+        </ul>
+
+         <!-- ===== ИЗОБРАЖЕНИЕ РИС. 2 ===== -->
+<div class="figure">
+    <img src="Основные части и механизмы СВД.jpg" alt="Основные части СВД" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+        <p><em>Рис. 2</em></p>
+
+        
+        <!-- ===== ВИДИО: СВД ===== -->
+<div class="video-container" style="margin: 25px 0; text-align: center;">
+    <h3 style="margin-bottom: 12px; color: #1f5f8b;">СВД</h3>
+    <video 
+        controls 
+        preload="metadata"
+        width="100%"
+        playsinline
+        poster="СВД.jpg"
+        style="max-width: 800px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); background: #000; display: block; margin: 0 auto;"
+    >
+        <!-- Видеофайл лежит в той же папке, что и этот HTML-файл -->
+        <source src="ДФ. Сделано в СССР. Снайперская винтовка Драгунова_480p.mp4">
+        
+        <!-- Текст для старых браузеров -->
+        Ваш браузер не поддерживает встроенное видео. 
+        <a href="ДФ. Сделано в СССР. Снайперская винтовка Драгунова_480p.mp4">Скачайте видео</a> и посмотрите его отдельно.
+    </video>
+    <p style="font-size: 14px; color: #555; font-style: italic; margin-top: 8px; text-indent: 0;">
+        Видеофрагмент: СВД
+    </p>
+</div>
+
+        <!-- ===== ТЕСТ ===== -->
+        <div class="test-section">
+            <h3>📝 Контрольный тест по разделу</h3>
+            <div id="testContainer"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="test-btn" onclick="checkTest()">Проверить ответы</button>
+                <button class="test-btn" onclick="resetTest()">🔄 Начать заново</button>
+            </div>
+            <div id="resultBox" class="result-box"></div>
+        </div>
+    </div>
+
+    <!-- ===== НИЖНЯЯ НАВИГАЦИЯ ===== -->
+    <div class="nav-bottom">
+        <a href="../index.html" class="nav-btn">★ Главная</a>
+        <a href="10.html" class="nav-btn">◀ Предыдущая</a>
+        <a href="12.html" class="nav-btn">Следующая ▶</a>
+        <a href="#top" class="nav-btn">▲ Вверх</a>
+    </div>
+
+    <div class="footer-note">
+        Москва 2026 г.
+    </div>
+</div>
+
+<script>
+// ============================================
+// БАЗА ВОПРОСОВ ПО СВД
+// Все ответы прямо содержатся в тексте страницы
+// ============================================
+var questionBank = [
+    // --- ВОПРОСЫ С ОДНИМ ПРАВИЛЬНЫМ ОТВЕТОМ ---
+    {
+        question: "Для чего предназначена снайперская винтовка СВД?",
+        options: [
+            "Для уничтожения появляющихся, движущихся, открытых и маскированных одиночных целей",
+            "Для ведения автоматического огня по групповым целям",
+            "Для поражения бронированных целей противника",
+            "Для метания ручных гранат"
+        ],
+        correct: 0,
+        explanation: "СВД является оружием снайпера и предназначена для уничтожения различных появляющихся, движущихся, открытых и маскированных одиночных целей."
+    },
+    {
+        question: "Какой калибр у снайперской винтовки СВД?",
+        options: ["7,62 мм", "5,45 мм", "9 мм", "12,7 мм"],
+        correct: 0,
+        explanation: "Калибр СВД — 7,62 мм. Калибр 5,45 мм — у АК-74, 9 мм — у ПМ."
+    },
+    {
+        question: "Какой патрон применяется для стрельбы из СВД?",
+        options: ["7,62×54R", "7,62×39", "5,45×39", "9×18 мм"],
+        correct: 0,
+        explanation: "Для СВД применяется патрон 7,62×54R. Патрон 7,62×39 — у АК-47, 5,45×39 — у АК-74, 9×18 — у ПМ."
+    },
+    {
+        question: "Какова длина снайперской винтовки СВД?",
+        options: ["1220 мм", "1120 мм", "1320 мм", "1420 мм"],
+        correct: 0,
+        explanation: "Длина винтовки СВД — 1220 мм, длина ствола — 620 мм."
+    },
+    {
+        question: "Какова длина ствола снайперской винтовки СВД?",
+        options: ["620 мм", "520 мм", "720 мм", "820 мм"],
+        correct: 0,
+        explanation: "Длина ствола СВД — 620 мм. Общая длина винтовки — 1220 мм."
+    },
+    {
+        question: "Какова масса снайперской винтовки СВД без патронов и оптического прицела?",
+        options: ["4,3 кг", "3,3 кг", "5,3 кг", "6,3 кг"],
+        correct: 0,
+        explanation: "Масса СВД без патронов и оптического прицела — 4,3 кг."
+    },
+    {
+        question: "Какова начальная скорость пули снайперской винтовки СВД?",
+        options: ["830 м/с", "715 м/с", "315 м/с", "900 м/с"],
+        correct: 0,
+        explanation: "Начальная скорость пули СВД — 830 м/с. Для сравнения: у ПМ — 315 м/с, у АК-74 — около 900 м/с."
+    },
+    {
+        question: "Какова боевая скорострельность снайперской винтовки СВД?",
+        options: ["до 30 выстрелов/мин", "до 20 выстрелов/мин", "до 40 выстрелов/мин", "до 60 выстрелов/мин"],
+        correct: 0,
+        explanation: "Боевая скорострельность СВД — до 30 выстрелов/мин. Огонь ведётся одиночными выстрелами."
+    },
+    {
+        question: "Какова ёмкость магазина снайперской винтовки СВД?",
+        options: ["10 патронов", "8 патронов", "20 патронов", "30 патронов"],
+        correct: 0,
+        explanation: "Ёмкость коробчатого магазина СВД — 10 патронов."
+    },
+    {
+        question: "Какова прицельная дальность снайперской винтовки СВД с оптическим прицелом?",
+        options: ["1300 м", "1200 м", "1000 м", "800 м"],
+        correct: 0,
+        explanation: "Прицельная дальность СВД с оптическим прицелом — 1300 м; с открытым прицелом — 1200 м; с ночным — до 300 м."
+    },
+    {
+        question: "Какова прицельная дальность снайперской винтовки СВД с открытым прицелом?",
+        options: ["1200 м", "1300 м", "1000 м", "800 м"],
+        correct: 0,
+        explanation: "Прицельная дальность СВД с открытым прицелом — 1200 м. С оптическим прицелом — 1300 м."
+    },
+    {
+        question: "Какова прицельная дальность снайперской винтовки СВД с ночным прицелом?",
+        options: ["до 300 м", "до 500 м", "до 800 м", "до 1000 м"],
+        correct: 0,
+        explanation: "Прицельная дальность СВД с ночным прицелом — до 300 м."
+    },
+    {
+        question: "Какова дальность убойного действия пули снайперской винтовки СВД?",
+        options: ["до 3800 м", "до 3000 м", "до 2000 м", "до 1300 м"],
+        correct: 0,
+        explanation: "Дальность убойного действия пули СВД — до 3800 м."
+    },
+    {
+        question: "Каким образом ведётся огонь из снайперской винтовки СВД?",
+        options: [
+            "Одиночными выстрелами",
+            "Короткими очередями",
+            "Длинными очередями",
+            "Непрерывным огнём"
+        ],
+        correct: 0,
+        explanation: "Огонь из снайперской винтовки ведётся одиночными выстрелами."
+    },
+    {
+        question: "Как подаются патроны при стрельбе из СВД?",
+        options: [
+            "Из коробчатого магазина ёмкостью 10 патронов",
+            "Из ленты на 50 патронов",
+            "Из барабанного магазина на 75 патронов",
+            "Из коробчатого магазина на 30 патронов"
+        ],
+        correct: 0,
+        explanation: "Подача патронов при стрельбе из СВД производится из коробчатого магазина ёмкостью на 10 патронов."
+    },
+    {
+        question: "К какому типу оружия относится снайперская винтовка СВД?",
+        options: [
+            "Самозарядное оружие",
+            "Автоматическое оружие",
+            "Ручное оружие с ручной перезарядкой",
+            "Гладкоствольное оружие"
+        ],
+        correct: 0,
+        explanation: "Снайперская винтовка СВД является самозарядным оружием."
+    },
+    {
+        question: "На чём основано перезаряжание снайперской винтовки СВД?",
+        options: [
+            "На использовании энергии пороховых газов, отводимых из канала ствола к газовому поршню",
+            "На использовании энергии отдачи при коротком ходе ствола",
+            "На использовании энергии отдачи при длинном ходе ствола",
+            "На использовании свободного затвора"
+        ],
+        correct: 0,
+        explanation: "Перезаряжание СВД основано на использовании энергии пороховых газов, отводимых из канала ствола к газовому поршню. Свободный затвор — у ПМ."
+    },
+    {
+        question: "Куда устремляется часть пороховых газов при выстреле из СВД?",
+        options: [
+            "Через газоотводное отверстие в стенке ствола в газовую камеру",
+            "Через дульный срез наружу",
+            "В патронник",
+            "В магазин"
+        ],
+        correct: 0,
+        explanation: "При выстреле часть пороховых газов, следующих за пулей, устремляется через газоотводное отверстие в стенке ствола в газовую камеру."
+    },
+    {
+        question: "Что происходит при отходе затворной рамы назад в СВД?",
+        options: [
+            "Затвор открывает канал ствола, извлекает гильзу и выбрасывает её наружу",
+            "Затвор запирает канал ствола",
+            "Курок ставится на предохранитель",
+            "Патрон досылается в патронник"
+        ],
+        correct: 0,
+        explanation: "При отходе затворной рамы назад затвор открывает канал ствола, извлекает из патронника гильзу и выбрасывает её из ствольной коробки наружу, а затворная рама сжимает возвратные пружины и взводит курок."
+    },
+    {
+        question: "Чем осуществляется запирание затвора в СВД?",
+        options: [
+            "Поворотом затвора влево и захождением боевых выступов в вырезы ствольной коробки",
+            "Инертной массой затвора",
+            "Клиновым запиранием",
+            "Газовым поршнем"
+        ],
+        correct: 0,
+        explanation: "Запирание затвора осуществляется его поворотом влево и захождением боевых выступов затвора в вырезы ствольной коробки. Инертная масса затвора — принцип запирания ПМ."
+    },
+    {
+        question: "Что необходимо сделать для производства очередного выстрела из СВД?",
+        options: [
+            "Отпустить спусковой крючок и нажать на него снова",
+            "Перезарядить винтовку вручную",
+            "Переключить предохранитель",
+            "Отвести затворную раму назад"
+        ],
+        correct: 0,
+        explanation: "Для производства очередного выстрела необходимо отпустить спусковой крючок и нажать на него снова."
+    },
+    {
+        question: "Что является сигналом о необходимости перезарядить снайперскую винтовку СВД?",
+        options: [
+            "Затворная рама остаётся в заднем положении",
+            "Звуковой сигнал",
+            "Выброс гильзы",
+            "Опускание флажка предохранителя"
+        ],
+        correct: 0,
+        explanation: "При выстреле последним патроном затвор упирается в останов затвора, и затворная рама остаётся в заднем положении. Это является сигналом о том, что надо снова зарядить винтовку."
+    },
+
+    // --- ВОПРОСЫ С НЕСКОЛЬКИМИ ПРАВИЛЬНЫМИ ОТВЕТАМИ ---
+    {
+        multiple: true,
+        question: "Какие патроны применяются для стрельбы из снайперской винтовки СВД? (выберите все правильные)",
+        options: [
+            "С обыкновенными пулями",
+            "С трассирующими пулями",
+            "С бронебойно-зажигательными пулями",
+            "Винтовочные снайперские патроны",
+            "С экспансивными пулями"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "Для стрельбы из СВД применяются винтовочные патроны с обыкновенными, трассирующими и бронебойно-зажигательными пулями или винтовочные снайперские патроны."
+    },
+    {
+        multiple: true,
+        question: "Что входит в комплект снайперской винтовки СВД? (выберите все правильные)",
+        options: [
+            "Принадлежность",
+            "Ремень",
+            "Чехол для оптического прицела",
+            "Сумка для переноски оптического прицела и магазинов",
+            "Штык-нож"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "В комплект СВД входят: принадлежность, ремень, чехол для оптического прицела, сумка для переноски оптического прицела и магазинов, сумочка для переноски зимнего устройства освещения сетки, запасных батареек и масленки. Штык-нож — это отдельная часть винтовки, а не элемент комплекта."
+    },
+    {
+        multiple: true,
+        question: "Из каких основных частей и механизмов состоит снайперская винтовка СВД? (выберите все правильные)",
+        options: [
+            "Ствол со ствольной коробкой, открытым прицелом и прикладом",
+            "Крышка ствольной коробки",
+            "Возвратный механизм",
+            "Затворная рама и затвор",
+            "Газовая трубка с регулятором, газовый поршень и толкатель с пружиной"
+        ],
+        correct: [0, 1, 2, 3, 4],
+        explanation: "Все перечисленные элементы входят в состав СВД. Полный список также включает ствольные накладки, ударно-спусковой механизм, предохранитель, магазин, щёку приклада, оптический прицел и штык-нож."
+    },
+    {
+        multiple: true,
+        question: "Какие утверждения о работе автоматики СВД верны? (выберите все правильные)",
+        options: [
+            "Перезаряжание основано на энергии пороховых газов, отводимых из канала ствола",
+            "Газы давят на переднюю стенку газового поршня",
+            "Поршень с толкателем отбрасывает затворную раму в заднее положение",
+            "Затворная рама сжимает возвратные пружины и взводит курок",
+            "Запирание ствола осуществляется инертной массой затвора"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "Перезаряжание СВД основано на энергии пороховых газов, отводимых из канала ствола; газы давят на поршень, который отбрасывает затворную раму назад; рама сжимает возвратные пружины и взводит курок. Запирание ствола инертной массой затвора — это принцип ПМ, а не СВД."
+    },
+    {
+        multiple: true,
+        question: "Какие характеристики СВД указаны верно? (выберите все правильные)",
+        options: [
+            "Калибр — 7,62 мм",
+            "Начальная скорость пули — 830 м/с",
+            "Прицельная дальность с оптическим прицелом — 1300 м",
+            "Дальность убойного действия пули — до 3800 м",
+            "Ёмкость магазина — 30 патронов"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "Калибр СВД — 7,62 мм, начальная скорость пули — 830 м/с, прицельная дальность с оптическим прицелом — 1300 м, дальность убойного действия — до 3800 м. Ёмкость магазина — 10 патронов, а не 30."
+    }
+];
+
+// ============================================
+// ЛОГИКА ТЕСТА (идентична файлу 5.html)
+// ============================================
+var currentQuestions = [];
+var selectedAnswers = {};
+var usedQuestionIndices = [];
+
+var QUESTIONS_PER_TEST = 10;
+
+function shuffleArray(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+}
+
+function getRandomQuestions() {
+    if (usedQuestionIndices.length + QUESTIONS_PER_TEST > questionBank.length) {
+        usedQuestionIndices = [];
+    }
+
+    var availableIndices = [];
+    for (var i = 0; i < questionBank.length; i++) {
+        if (usedQuestionIndices.indexOf(i) === -1) {
+            availableIndices.push(i);
+        }
+    }
+
+    availableIndices = shuffleArray(availableIndices);
+    var chosenIndices = availableIndices.slice(0, QUESTIONS_PER_TEST);
+
+    for (var k = 0; k < chosenIndices.length; k++) {
+        usedQuestionIndices.push(chosenIndices[k]);
+    }
+
+    var result = [];
+    for (var m = 0; m < chosenIndices.length; m++) {
+        result.push(prepareQuestion(questionBank[chosenIndices[m]]));
+    }
+    return result;
+}
+
+function prepareQuestion(q) {
+    var isMulti = !!q.multiple;
+    var indices = [];
+    for (var i = 0; i < q.options.length; i++) indices.push(i);
+    var shuffledIndices = shuffleArray(indices);
+
+    var newOptions = [];
+    for (var j = 0; j < shuffledIndices.length; j++) {
+        newOptions.push(q.options[shuffledIndices[j]]);
+    }
+
+    var newCorrect;
+    if (isMulti) {
+        newCorrect = [];
+        for (var c = 0; c < q.correct.length; c++) {
+            newCorrect.push(shuffledIndices.indexOf(q.correct[c]));
+        }
+        newCorrect.sort(function(a, b) { return a - b; });
+    } else {
+        newCorrect = shuffledIndices.indexOf(q.correct);
+    }
+
+    return {
+        question: q.question,
+        options: newOptions,
+        correct: newCorrect,
+        multiple: isMulti,
+        explanation: q.explanation || ''
+    };
+}
+
+function renderTest() {
+    currentQuestions = getRandomQuestions();
+    selectedAnswers = {};
+    var container = document.getElementById('testContainer');
+    var html = '';
+    for (var i = 0; i < currentQuestions.length; i++) {
+        var q = currentQuestions[i];
+        var cls = q.multiple ? 'question-block multi' : 'question-block';
+        html += '<div class="' + cls + '" id="q' + i + '">';
+        html += '<p>' + (i + 1) + '. ' + q.question + '</p>';
+        if (q.multiple) {
+            html += '<div class="hint">Выберите все правильные варианты</div>';
+        }
+        for (var j = 0; j < q.options.length; j++) {
+            html += '<label id="q' + i + '_opt' + j + '">';
+            var inputType = q.multiple ? 'checkbox' : 'radio';
+            html += '<input type="' + inputType + '" name="q' + i + '" value="' + j + '"> ';
+            html += q.options[j];
+            html += '</label>';
+        }
+        html += '<div class="feedback" id="fb' + i + '" style="display:none;"></div>';
+        html += '<div class="correct-list" id="cl' + i + '" style="display:none;"></div>';
+        html += '<div class="explanation" id="ex' + i + '" style="display:none;"></div>';
+        html += '</div>';
+    }
+    container.innerHTML = html;
+    document.getElementById('resultBox').style.display = 'none';
+    document.getElementById('resultBox').innerHTML = '';
+
+    container.onchange = function(e) {
+        var target = e.target;
+        if (target.tagName !== 'INPUT') return;
+        var name = target.name;
+        var qIndex = parseInt(name.substring(1), 10);
+        var q = currentQuestions[qIndex];
+        if (!q) return;
+
+        if (q.multiple) {
+            var checked = [];
+            var boxes = container.querySelectorAll('input[name="' + name + '"]:checked');
+            for (var b = 0; b < boxes.length; b++) {
+                checked.push(parseInt(boxes[b].value, 10));
+            }
+            checked.sort(function(a, b) { return a - b; });
+            selectedAnswers[name] = checked;
+        } else {
+            selectedAnswers[name] = parseInt(target.value, 10);
+        }
+    };
+}
+
+function arraysEqual(a, b) {
+    if (!a || !b) return false;
+    if (a.length !== b.length) return false;
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) return false;
+    }
+    return true;
+}
+
+function checkTest() {
+    var correct = 0;
+    for (var i = 0; i < currentQuestions.length; i++) {
+        var q = currentQuestions[i];
+        var selected = selectedAnswers['q' + i];
+        var qBlock = document.getElementById('q' + i);
+        var fb = document.getElementById('fb' + i);
+        var cl = document.getElementById('cl' + i);
+        var ex = document.getElementById('ex' + i);
+        var isCorrect = false;
+
+        for (var opt = 0; opt < q.options.length; opt++) {
+            var lbl = document.getElementById('q' + i + '_opt' + opt);
+            if (lbl) {
+                lbl.classList.remove('answer-correct', 'answer-wrong-selected', 'answer-correct-not-selected');
+            }
+        }
+
+        if (q.multiple) {
+            var correctArr = q.correct;
+            var selectedArr = (selected !== undefined) ? selected : [];
+
+            for (var m = 0; m < q.options.length; m++) {
+                var lblM = document.getElementById('q' + i + '_opt' + m);
+                if (!lblM) continue;
+                var isCorr = correctArr.indexOf(m) !== -1;
+                var isSel = selectedArr.indexOf(m) !== -1;
+                if (isCorr && isSel) {
+                    lblM.classList.add('answer-correct');
+                } else if (!isCorr && isSel) {
+                    lblM.classList.add('answer-wrong-selected');
+                } else if (isCorr && !isSel) {
+                    lblM.classList.add('answer-correct-not-selected');
+                }
+            }
+
+            if (selectedArr.length > 0 && arraysEqual(selectedArr, correctArr)) {
+                isCorrect = true;
+            }
+        } else {
+            var correctIdx = q.correct;
+            for (var n = 0; n < q.options.length; n++) {
+                var lblN = document.getElementById('q' + i + '_opt' + n);
+                if (!lblN) continue;
+                var isCorrN = (n === correctIdx);
+                var isSelN = (selected === n);
+                if (isCorrN) {
+                    lblN.classList.add('answer-correct');
+                } else if (isSelN) {
+                    lblN.classList.add('answer-wrong-selected');
+                }
+            }
+            if (selected !== undefined && selected === correctIdx) {
+                isCorrect = true;
+            }
+        }
+
+        if (isCorrect) {
+            correct++;
+            qBlock.style.borderLeftColor = '#1f7a1f';
+            fb.className = 'feedback ok';
+            fb.style.display = 'block';
+            fb.textContent = '✔ Верно';
+            cl.style.display = 'none';
+        } else {
+            qBlock.style.borderLeftColor = '#8b0000';
+            fb.className = 'feedback fail';
+            fb.style.display = 'block';
+            fb.textContent = '✘ Неверно';
+
+            var listHtml = '<strong>Правильные варианты:</strong><ul>';
+            if (q.multiple) {
+                for (var c = 0; c < q.correct.length; c++) {
+                    listHtml += '<li>' + q.options[q.correct[c]] + '</li>';
+                }
+            } else {
+                listHtml += '<li>' + q.options[q.correct] + '</li>';
+            }
+            listHtml += '</ul>';
+            cl.innerHTML = listHtml;
+            cl.style.display = 'block';
+        }
+
+        // Пояснение правильного ответа показывается ВСЕГДА
+        if (q.explanation) {
+            ex.innerHTML = '<strong>Пояснение:</strong> ' + q.explanation;
+            ex.style.display = 'block';
+        } else {
+            ex.style.display = 'none';
+        }
+    }
+
+    var grade, gradeText, gradeClass;
+    if (correct === 10) { grade = 5; gradeText = 'Отлично!'; gradeClass = 'grade-5'; }
+    else if (correct === 9) { grade = 4; gradeText = 'Хорошо!'; gradeClass = 'grade-4'; }
+    else if (correct === 8) { grade = 3; gradeText = 'Удовлетворительно'; gradeClass = 'grade-3'; }
+    else { grade = 2; gradeText = 'Неудовлетворительно. Требуется повторное изучение!'; gradeClass = 'grade-2'; }
+
+    var resultBox = document.getElementById('resultBox');
+    resultBox.style.display = 'block';
+    resultBox.className = 'result-box';
+    resultBox.innerHTML = '<div class="' + gradeClass + '">' +
+        '<p style="font-size: 28px;">Ваша оценка: ' + grade + '</p>' +
+        '<p style="font-size: 22px;">' + gradeText + '</p>' +
+        '<p style="font-size: 18px; margin-top: 10px;">Правильных ответов: ' + correct + ' из 10</p>' +
+        '</div>';
+    resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function resetTest() {
+    renderTest();
+    var section = document.querySelector('.test-section');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+window.onload = function() {
+    renderTest();
+};
+</script>
+</body>
+</html>
