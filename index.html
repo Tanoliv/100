@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Огневая подготовка - Главная</title>
+    <style>
+        /* СТИЛИ ТОЛЬКО ДЛЯ ГЛАВНОЙ СТРАНИЦЫ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #3a4a3a;
+            background-image: radial-gradient(circle at 10% 20%, #4f6b4f, #2d3a2d);
+            font-family: 'Times New Roman', 'Arial', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background: #d9d4c4;
+            background-image: linear-gradient(145deg, #e3ded0, #cbc4b2);
+            border: 6px solid #5a4d3a;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8), inset 0 0 30px rgba(90, 77, 58, 0.3);
+            padding: 25px 30px 35px;
+            position: relative;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border: 2px solid #7a6b55;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        /* ===== ШАПКА С ИНФОРМАЦИЕЙ ОБ УНИВЕРСИТЕТЕ ===== */
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 3px solid #5a4d3a;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header-center {
+            text-align: center;
+            font-size: 14px;
+            color: #2d3a2d;
+            line-height: 1.6;
+            width: 100%;
+        }
+
+        .header-center .ministry {
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #2d3a2d;
+        }
+
+        .header-center .university {
+            font-weight: bold;
+            font-size: 15px;
+            color: #2d3a2d;
+        }
+
+        .header-center .department {
+            font-weight: bold;
+            font-size: 15px;
+            color: #2d3a2d;
+            margin-top: 5px;
+        }
+
+        .header-center .sub-text {
+            font-size: 13px;
+            margin: 5px 0;
+        }
+
+        /* ===== ОСНОВНОЙ ЗАГОЛОВОК ===== */
+        .title-block {
+            text-align: center;
+            margin: 15px 0 5px 0;
+            padding: 10px 0;
+            border-top: 3px solid #b8860b;
+            border-bottom: 3px solid #b8860b;
+        }
+
+        .main-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #2d3a2d;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+
+        .sub-title {
+            font-size: 20px;
+            font-weight: normal;
+            color: #4d4233;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        /* ===== КОНТЕНТ ===== */
+        .content {
+            padding: 10px 5px;
+        }
+
+        /* ===== АВТОРЫ ===== */
+        .authors {
+            text-align: center;
+            font-size: 16px;
+            color: #2d3a2d;
+            margin: 20px 0;
+            line-height: 1.8;
+            border-top: 2px solid #5a4d3a;
+            border-bottom: 2px solid #5a4d3a;
+            padding: 15px 0;
+        }
+
+        .authors .author-name {
+            font-weight: bold;
+        }
+
+        /* ===== МЕНЮ ===== */
+        .grid-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 15px;
+            margin: 20px 0 30px;
+        }
+
+        .grid-item {
+            background: #c4bbaa;
+            background-image: linear-gradient(145deg, #d4cdbc, #b8af9c);
+            border: 2px solid #5a4d3a;
+            border-radius: 8px;
+            padding: 15px 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            color: #1f2a1f;
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 0 #3a4a3a;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.03);
+            background: #d6cfbe;
+            box-shadow: 6px 6px 0 #2d3a2d;
+            border-color: #b8860b;
+        }
+
+        .grid-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ===== ПОДВАЛ ===== */
+        .footer-note {
+            text-align: center;
+            font-weight: bold;
+            color: #2d3a2d;
+            border-top: 2px solid #5a4d3a;
+            padding-top: 20px;
+            margin-top: 10px;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        /* ===== АДАПТИВНОСТЬ ===== */
+        @media (max-width: 600px) {
+            .main-title { 
+                font-size: 28px; 
+                letter-spacing: 4px;
+            }
+            .sub-title { font-size: 16px; letter-spacing: 3px; }
+            .grid-menu { grid-template-columns: 1fr 1fr; }
+            .header-center { font-size: 12px; }
+            .header-center .ministry { font-size: 13px; }
+            .header-center .university { font-size: 12px; }
+            .header-center .department { font-size: 12px; }
+            .authors { font-size: 14px; }
+            .footer-note { font-size: 15px; }
+        }
+
+        @media (max-width: 400px) {
+            .main-title { font-size: 22px; letter-spacing: 2px; }
+            .sub-title { font-size: 14px; letter-spacing: 2px; }
+            .grid-menu { grid-template-columns: 1fr; }
+            .footer-note { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ===== ШАПКА С ИНФОРМАЦИЕЙ ОБ УНИВЕРСИТЕТЕ ===== -->
+        <div class="header">
+            <div class="header-center">
+                <div class="ministry">МИНИСТЕРСТВО ЦИФРОВОГО РАЗВИТИЯ, СВЯЗИ<br>И МАССОВЫХ КОММУНИКАЦИЙ РОССИЙСКОЙ ФЕДЕРАЦИИ</div>
+                <div class="sub-text">Ордена Трудового Красного Знамени федеральное государственное<br>бюджетное образовательное учреждение высшего образования</div>
+                <div class="university">МОСКОВСКИЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ СВЯЗИ И ИНФОРМАТИКИ</div>
+                <div class="department">КАФЕДРА ОСНОВЫ ВОЕННОЙ ПОДГОТОВКИ</div>
+            </div>
+        </div>
+
+        <!-- ===== ОСНОВНОЙ ЗАГОЛОВОК ===== -->
+        <div class="title-block">
+            <div class="main-title">Огневая подготовка</div>
+            <div class="sub-title">учебное пособие</div>
+        </div>
+
+        <div class="content">
+            <!-- ===== АВТОРЫ ===== -->
+            <div class="authors">
+                <span class="author-name">Заведующий кафедрой Основы военной подготовки Г.Е. Забродченко</span><br>
+                <span class="author-name">Старший преподаватель О.И. Таньков</span><br>
+                <span class="author-name">Старший преподаватель О.Л. Нагорнов</span>
+            </div>
+
+            <!-- ===== МЕНЮ ===== -->
+            <div class="grid-menu">
+                <div class="grid-item"><a href="11/1.html">01. Предисловие</a></div>
+                <div class="grid-item"><a href="11/2.html">02. Внутренняя баллистика</a></div>
+                <div class="grid-item"><a href="11/3.html">03. Внешняя баллистика</a></div>
+                <div class="grid-item"><a href="11/4.html">04. Приемы и правила стрельбы</a></div>
+                <div class="grid-item"><a href="11/5.html">05. Пистолет Макарова</a></div>
+                <div class="grid-item"><a href="11/6.html">06. Автомат Калашникова</a></div>
+                <div class="grid-item"><a href="11/7.html">07. Ручной Пулемет Калашникова</a></div>
+                <div class="grid-item"><a href="11/8.html">08. РПГ</a></div>
+                <div class="grid-item"><a href="11/9.html">09. Ручные Гранаты</a></div>
+                <div class="grid-item"><a href="11/11.html">10. СВД</a></div>
+                <div class="grid-item"><a href="11/10.html">11. Упражнения стрельб</a></div>
+                <div class="grid-item"><a href="11/12.html">12. Контрольные тесты</a></div>
+            </div>
+        </div>
+
+        <!-- ===== ПОДВАЛ ===== -->
+        <div class="footer-note">
+            Москва 2026 г.
+        </div>
+    </div>
+</body>
+</html>
