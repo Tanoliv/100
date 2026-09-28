@@ -1,0 +1,253 @@
+
+/* ============================================
+   ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3a4a3a;
+    background-image: radial-gradient(circle at 10% 20%, #4f6b4f, #2d3a2d);
+    font-family: 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 20px;
+}
+
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+.container {
+    max-width: 1000px;
+    width: 100%;
+    background: #d9d4c4;
+    background-image: linear-gradient(145deg, #e3ded0, #cbc4b2);
+    border: 6px solid #5a4d3a;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8), inset 0 0 30px rgba(90, 77, 58, 0.3);
+    padding: 25px 30px 35px;
+    position: relative;
+}
+
+/* Декоративная рамка */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 2px solid #7a6b55;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* ===== ШАПКА ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #5a4d3a;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.star {
+    color: #b8860b;
+    font-size: 38px;
+    line-height: 1;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #2d3a2d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ===== НАВИГАЦИЯ ===== */
+.nav-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-links a,
+.nav-btn {
+    background: #5a4d3a;
+    color: #e3ded0;
+    padding: 6px 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #7a6b55;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav-links a:hover,
+.nav-btn:hover {
+    background: #b8860b;
+    color: #1f2a1f;
+    transform: scale(1.05);
+}
+
+/* ===== КОНТЕНТ ===== */
+.content {
+    padding: 15px 5px;
+    min-height: 350px;
+}
+
+.content h2 {
+    color: #2d3a2d;
+    border-left: 8px solid #b8860b;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.content h3 {
+    color: #2d3a2d;
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 4px solid #b8860b;
+}
+
+/* ===== ОТСТУП В АБЗАЦАХ 1,25 см ===== */
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2d3a2d;
+    text-indent: 47.24px; /* 1,25 см = 47.24px при 96 DPI */
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.content ul,
+.content ol {
+    margin-left: 40px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #2d3a2d;
+}
+
+.content ul li,
+.content ol li {
+    margin-bottom: 8px;
+}
+
+/* ===== СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ И ПОДПИСЕЙ ===== */
+.figure {
+    text-align: center;
+    margin: 25px 0;
+    padding: 15px;
+    background: #cbc4b2;
+    border-radius: 8px;
+    border: 1px solid #5a4d3a;
+}
+
+.figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.figure .caption {
+    font-size: 16px;
+    color: #2d3a2d;
+    margin-top: 12px;
+    font-style: italic;
+    text-indent: 0;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.figure .caption strong {
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* ===== НИЖНЯЯ НАВИГАЦИЯ ===== */
+.nav-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #5a4d3a;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ===== ПОДВАЛ ===== */
+.footer-note {
+    text-align: center;
+    font-weight: bold;
+    color: #2d3a2d;
+    border-top: 2px solid #5a4d3a;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 18px;
+    }
+    .nav-links a,
+    .nav-btn {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+    .content h2 {
+        font-size: 22px;
+    }
+    .content h3 {
+        font-size: 18px;
+    }
+    .content p {
+        font-size: 16px;
+        text-indent: 40px; /* немного меньше на мобильных */
+    }
+    .content ul,
+    .content ol {
+        font-size: 16px;
+        margin-left: 25px;
+    }
+    .figure {
+        padding: 10px;
+        margin: 15px 0;
+    }
+    .figure .caption {
+        font-size: 14px;
+    }
+    .footer-note {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .content p {
+        text-indent: 30px;
+    }
+    .figure .caption {
+        font-size: 12px;
+    }
+}
